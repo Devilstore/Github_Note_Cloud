@@ -29,7 +29,7 @@ vector<int> bubbleSort(vector<int> &data)
     return data;
 }
 -----------------------------------------------------------------------
-**/***   提前结束 + 冒泡边界优化   ***/ ** 
+/***   提前结束 + 冒泡边界优化   ***/
 // 记录上一轮交换的最后一次边界
 vector<int> bubbleSort(vector<int> &data)
 {
@@ -179,7 +179,7 @@ vector<int> insertSort(vector<int> &data)
 
 ## 4.希尔排序：
 
-时间复杂度：O($nlogn$)，最好情况O($$nlog^2n$$)，最坏情况O($nlog^2n$)
+时间复杂度：O($nlogn$)，最好情况O($nlog^2n$)，最坏情况O($nlog^2n$)
 
 空间复杂度：O($1$)
 
@@ -215,14 +215,14 @@ vector<int> shellSort(vector<int> &data)
 
 ## 5.归并排序：
 
-时间复杂度：O($nlogn$)，最好情况O($$nlogn$$)，最坏情况O($nlogn$)
+时间复杂度：O($nlogn$)，最好情况O($nlogn$)，最坏情况O($nlogn$)
 
 空间复杂度：O($n$)
 
 稳定性：稳定
 
 ```c++
-**/***   递归版本：自顶向下 非原地归并   ***/ **
+/***   递归版本：自顶向下 非原地归并   ***/
 void mergeSort(vector<int> &data, int left, int right)
 {
     if (left == right)
@@ -253,7 +253,7 @@ void merge(vector<int> &data, int left, int mid, int right)
 
 
 -----------------------------------------------------------------------
-**/***   非递归版本：自底向上 非原地归并   ***/  **
+/***   非递归版本：自底向上 非原地归并   ***/
 void mergeSort(vector<int> &data)
 {
     int n = data.size();
@@ -294,14 +294,14 @@ void merge(vector<int> &data, int left, int mid, int right)
 
 ## 6.快速排序：
 
-时间复杂度：O($nlogn$)，最好情况O($$nlogn$$)，最坏情况O($n^2$)
+时间复杂度：O($nlogn$)，最好情况O($nlogn$)，最坏情况O($n^2$)
 
 空间复杂度：O($logn$)
 
 稳定性：不稳定
 
 ```c++
-**/***   普通版本：递归快排   ***/**
+/***   普通版本：递归快排   ***/
 // 随机选择 pivot 元素快排
 void quickSort(vector<int>& data, int left, int right){
     if(left >= right) return;
@@ -379,7 +379,7 @@ int partition(vector<int>& data, int left, int right){
     ***/
 }
 
-**/***   集合版本：递归快排   ***/**
+/***   集合版本：递归快排   ***/
 
 void quickSort(vector<int>& data, int left, int right){
     if(left >= right) return;
@@ -418,7 +418,7 @@ void quickSort(vector<int>& data, int left, int right){
 稳定性：不稳定
 
 ```c++
-**/***   自上向下调整：大根堆（最终结果从小到大排序）   ***/**
+/***   自上向下调整：大根堆（最终结果从小到大排序）   ***/
 // 堆排序 主函数
 void heapSort(vector<int>& data){
     int root = 0, endIndex = data.size() - 1;
@@ -466,7 +466,7 @@ void adjustDown(vector<int>& data, int parent, int endIndex){
 稳定性：稳定
 
 ```c++
-**/***   适合data元素最大值不大的情况，只适合整数排序，不适合负数元素   ***/**
+/***   适合data元素最大值不大的情况，只适合整数排序，不适合负数元素   ***/
 
 void countSort(vector<int> &data)
 {
@@ -508,7 +508,7 @@ void countSort(vector<int> &data)
 稳定性：稳定
 
 ```c++
-**/***   计数排序的升级版   ***/**
+/***   计数排序的升级版   ***/
 
 void **bucketSort**(vector<int> &data, int r)
 {
@@ -584,7 +584,7 @@ void quickSort(vector<int>& data, int left, int right){
 稳定性：稳定
 
 ```c++
-**// 计算 data 元素的最大位数**
+// 计算 data 元素的最大位数
 int maxBits(vector<int> &data)
 {
     int maxBit = 0, maxNum = data[0];
@@ -603,7 +603,7 @@ int maxBits(vector<int> &data)
     return maxBit;
 }
 
-**// 基数排序主算法**
+// 基数排序主算法
 void radixSort(vector<int> &data)
 {
     int n = data.size();
